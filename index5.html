@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let newArr = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    
+    function traCuu(text) {
+        let index = -1;
+        for (let i = 0 ; i < arr.length ; i++) {
+            if (text === arr[i]) {
+                index = i;
+                break;
+            }
+        }
+        return index;
+    }
+    let nguoiDungnhap = prompt("Nhập");
+    let ketQua = traCuu(nguoiDungnhap);
+    if (ketQua === -1) {
+        alert("Không tìm thấy ngôi sao nào");
+    } else {
+        alert("Ngôi sao tương ứng là: " + newArr[ketQua]);
+    }
+    
+    
+    
+</script>
+</body>
+</html>
